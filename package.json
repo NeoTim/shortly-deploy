@@ -3,7 +3,10 @@
   "version": "0.0.1",
   "description": "shortly using express",
   "main": "server.js",
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joelcoxokc/shortly-deploy.git"
+  },
   "license": "Proprietary",
   "private": true,
   "dependencies": {
@@ -33,5 +36,16 @@
   },
   "devDependencies": {
     "supertest": "^0.10.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/joelcoxokc/shortly-deploy/issues"
+  },
+  "homepage": "https://github.com/joelcoxokc/shortly-deploy"
 }
