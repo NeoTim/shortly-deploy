@@ -1,0 +1,20 @@
+
+<div class="modal">
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Login</h1>
+    <button ng-click="vm.closeModal()" class="button button-clear">cancel</button>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="login()">
+      <ion-list>
+        <label class="item item-input"><span class="input-label">Username</span>
+          <input type="text" ng-model="vm.username"/>
+        </label>
+        <label class="item item-input"><span class="input-label">Password</span>
+          <input type="password" ng-model="vm.password"/>
+        </label>
+      </ion-list>
+      <button ng-click="vm.login(); vm.closeModal()" class="button button-positive button-block">Login</button>
+    </form>
+  </ion-content>
+</div>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, width=device-width, minimal-ui">
+    <title>clurtch</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white-translucent">
+    <link href="css/font-awesome.css?v=1408558144792" rel="stylesheet">
+    <link href="css/app.css?v=1408558144792" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB16sGmIekuGIvYOfNoW9T44377IU2d2Es&amp;sensor=true"></script>
+    <script>GLOBALS = {"ENV":"development","BACKEND_URL":"http://10.8.29.210:9000","BUNDLE_NAME":"clurtch","CACHE_TAG":1408558144792,"WEINRE_ADDRESS":"10.8.29.210:31173"};</script>
+    <script src="http://maps.googleapis.com/maps/api/js?libraries=places,weather,geometry,visualization&amp;sensor=false"></script>
+    <script src="js/vendor.js?v=1408558144792"></script>
+    <script src="js/bootstrap.js?v=1408558144792"></script>
+    <script src="js/app.js?v=1408558144792"></script>
+    <script id="cordova-js" src="cordova.js"></script>
+  </head>
+  <body animation="slide-left-right-ios7">
+    <div ng-controller="AppCtrl">
+      <script type="text/ng-template" id="rateModal.html">
+        <div class="modal">
+          <ion-header-bar>
+            <button ng-click="rateModal.hide()" class="button">Cancel</button>
+            <h1 class="title">Rate</h1>
+            <button ng-click="rateModal.hide()" class="button">Done</button>
+          </ion-header-bar>
+          <ion-content>
+            <h1>Rating modal</h1>
+          </ion-content>
+        </div>
+      </script>
+      <script type="text/ng-template" id="imageModal.html">
+        <div class="modal">
+          <ion-header-bar>
+            <button ng-click="imageModal.hide()" class="button">Cancel</button>
+            <h1 class="title">Rate</h1>
+            <button ng-click="imageModal.hide()" class="button">Done</button>
+          </ion-header-bar>
+          <ion-content>
+            <h1>image modal</h1>
+          </ion-content>
+        </div>
+      </script>
+      <script type="text/ng-template" id="collectModal.html">
+        <div class="modal">
+          <ion-header-bar>
+            <button ng-click="collectModal.hide()" class="button">Cancel</button>
+            <h1 class="title">Rate</h1>
+            <button ng-click="collectModal.hide()" class="button">Done</button>
+          </ion-header-bar>
+          <ion-content>
+            <h1>collect modal</h1>
+          </ion-content>
+        </div>
+      </script>
+      <ion-nav-bar type="bar-positive" animation="nav-title-slide-ios7" back-button-type="button-icon" back-button-icon="ion-chevron-left" class="bar bar-positive">
+        <ion-nav-back-button class="button-clear"></ion-nav-back-button>
+      </ion-nav-bar>
+      <ion-nav-view animation="slide-left-right"></ion-nav-view>
+    </div>
+  </body>
+</html>

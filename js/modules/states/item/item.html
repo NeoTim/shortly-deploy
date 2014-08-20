@@ -1,0 +1,26 @@
+
+<ion-view title="{{vm.item.name}}" has-subheader="true">
+  <ion-nav-buttons side="right" ng-hide="vm.showReviews">
+    <button ng-click="vm.showReviews = true" class="button button-clear icon ion-ios7-camera"></button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right" ng-show="vm.showReviews">
+    <button ng-click="vm.showReviews = false" class="button button-clear icon ion-ios7-list"></button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="button-bar"><a class="button button-energized icon ion-ios7-bookmarks"></a><a ng-click="vm.reviewItem()" class="button button-energized icon ion-ios7-camera"></a><a ng-click="vm.collectItem()" ng-hide="vm.has_collected" class="button button-energized icon ion-ios7-checkmark"></a><a ng-click="vm.unCollectItem()" ng-show="vm.has_collected" class="button button-energized icon ion-ios7-checkmark active"></a><a ng-click="vm.bookmarkItem()" ng-hide="vm.has_bookmarked" class="button button-energized icon ion-bookmark"></a><a ng-click="vm.unBookmarkItem()" ng-show="vm.has_bookmarked" class="button button-energized icon ion-bookmark active"></a></div>
+    <div class="list"><img src="{{vm.item.image}}" class="full-image"/>
+      <div id="map_canvas">
+        <google-map center="vm.map.center" zoom="vm.map.zoom" draggable="true" options="vm.options">
+          <marker coords="vm.marker.coords" options="vm.marker.options" events="vm.marker.events" idkey="vm.marker.id"></marker>
+        </google-map>
+      </div>
+      <div class="button-bar button-bar-small">
+        <button class="button button-light button-small">Photos</button>
+        <button class="button button-light button-small">Reviews</button>
+      </div>
+    </div>
+    <div ng-repeat="photo in vm.photos" style="width:50%;" class="list card">
+      <div class="item item-image"><img src="{{photo.url}}"/></div>
+    </div>
+  </ion-content>
+</ion-view>

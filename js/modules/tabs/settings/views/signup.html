@@ -1,0 +1,21 @@
+
+<div class="modal">
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Sign-Up</h1>
+    <button ng-click="vm.signupModal.hide()" class="button button-clear">cancel</button>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="signup()">
+      <ion-list>
+        <label class="item item-input"><span class="input-label">Email</span>
+          <input type="text" ng-model="vm.username"/>
+        </label>
+        <label class="item item-input"><span class="input-label">Password</span>
+          <input type="password" ng-model="vm.password"/>
+        </label>
+      </ion-list>
+      <button ng-click="vm.signup(); vm.signupModal.hide()" class="button button-positive button-block">Sign-Up</button>
+      <button ng-click="vm.signup(); vm.signupModal.hide()" class="button button-positive button-block">Facebook Connect</button>
+    </form>
+  </ion-content>
+</div>

@@ -1,0 +1,25 @@
+
+<ion-view title="List">
+  <ion-content class="bg-grey">
+    <div class="button-bar">
+      <button ng-click="list.showBookmarks()" class="col button button-energized button-small">Bookmarks</button>
+      <button ng-click="list.showCollection()" class="col button button-energized button-small">Collections</button>
+    </div>
+    <ion-list ng-show="list.viewCollection"><a ng-repeat="item in list.collection" class="menu-card">
+        <div class="menu-card-content"><img src="{{item.image}}"/>
+          <div class="menu-card-footer">
+            <div>{{item.name | limitTo:30 }}</div>
+            <div>@{{item.menu_name | limitTo:30 }}</div>
+            <div class="text-left assertive">{{item.stars}}</div><span class="text-right"><i style="color:grey;" class="icon ion-navigate">&nbsp</i><span>{{item.dist}} mi</span></span>
+          </div>
+        </div></a></ion-list>
+    <ion-list ng-show="list.viewBookmarks"><a ng-repeat="item in list.bookmarks" class="menu-card">
+        <div class="menu-card-content"><img src="{{item.image}}"/>
+          <div class="menu-card-footer">
+            <div>{{item.name | limitTo:30 }}</div>
+            <div>@{{item.menu_name | limitTo:30 }}</div>
+            <div class="text-left assertive">{{item.stars}}</div><span class="text-right"><i style="color:grey;" class="icon ion-navigate">&nbsp</i><span>{{item.dist}} mi</span></span>
+          </div>
+        </div></a></ion-list>
+  </ion-content>
+</ion-view>

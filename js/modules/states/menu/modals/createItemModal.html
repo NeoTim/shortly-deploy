@@ -1,0 +1,21 @@
+
+<div class="modal">
+  <ion-header-bar class="bar-positive">
+    <button ng-click="closeModal()" class="button button-clear">Cancel</button>
+    <h1 class="title">Add Item</h1>
+    <button ng-click="addItem(newItem)" class="button button-clear">Done</button>
+  </ion-header-bar>
+  <ion-content>
+    <ion-list>
+      <label class="item item-input item-floating-label bg-white"><span class="input-label">Please be precise</span>
+        <input type="text" placeholder="Menu Item Title" ng-model="newItem.name"/>
+      </label>
+      <label class="item item-input item-floating-label bg-white"><span class="input-label">Description</span>
+        <textarea ng-model="newItem.description" placeholder="Description"></textarea>
+      </label>
+      <label class="checkbox">
+        <input type="checkbox"/>
+      </label>
+    </ion-list>
+  </ion-content>
+</div>

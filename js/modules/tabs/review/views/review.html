@@ -1,0 +1,15 @@
+
+<ion-view title="Select Your Menu">
+  <div class="bar bar-subheader bar-positive item-input-inset">
+    <label class="item-input-wrapper"><i class="icon ion-ios7-search placeholder-icon"></i>
+      <form ng-submit="reviewMenu.newSearch(reviewMenu.nearbyFilter)">
+        <input type="search" placeholder="Search" ng-model="reviewMenu.nearbyFilter"/>
+      </form>
+    </label>
+  </div>
+  <ion-content class="bg-grey has-subheader">
+    <div class="list"><a ng-repeat="menu in reviewMenu.menus | filter:reviewMenu.nearbyFilter" href="#/tab/review/choose-item/{{menu._id}}" class="item">
+        <h2>{{menu.name}}</h2>
+        <h4 class="text-left">{{menu.address + " - " + menu.city}}</h4><span class="text-right"><i style="color:grey;" class="icon ion-navigate">&nbsp</i><span>{{menu.dist}} mi</span></span></a></div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,16 @@
+
+<ion-view hide-nav-bar="true" id="places">
+  <div class="bar bar-positive bar-header item-input-inset">
+    <button ng-click="openModal()" class="button button-clear ion-funnel">&nbsp&nbsp</button>
+    <label disable-tap="disable-tap" class="item-input-wrapper"><i class="icon ion-ios7-search placeholder-icon"></i>
+      <input type="text" id="Autocomplete" ng-autocomplete="ng-autocomplete" ng-model="result1" class="form-control"/>
+    </label><a href="#/tab/menus/map" class="button button-clear ion-map"></a>
+  </div>
+  <ion-content class="has-header has-header">
+    <ion-list>
+      <ion-item ng-repeat="location in vm.locations" type="item-text-wrap" href="#/tab/menus/menu/{{location.place_id}}" class="item-avatar"><img ng-src="{{location.photos[0].getUrl({'maxWidth': 65, 'maxHeight': 65})}}"/>
+        <h2>{{location.name}}</h2>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

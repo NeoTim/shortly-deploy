@@ -1,0 +1,20 @@
+
+<ion-view hide-nav-bar="true">
+  <ion-header-bar class="bar-positive item-input-inset">
+    <button ng-click="vm.openModal()" class="button button-clear ion-funnel">&nbsp&nbsp</button>
+    <label class="item-input-wrapper"><i class="icon ion-ios7-search placeholder-icon"></i>
+      <form ng-submit="vm.querySearch(vm.itemsFilter)">
+        <input type="search" placeholder="Search" ng-model="vm.itemsFilter"/>
+      </form>
+    </label><a href="#/tab/items/map" class="button button-clear ion-map"></a>
+  </ion-header-bar>
+  <ion-content class="bg-grey">
+    <div ng-repeat="item in vm.items | orderBy: 'dist' | filter:vm.itemsFilter" ng-click="vm.storeItem(item)" class="list card">
+      <div class="item item-image"><img src="{{item.image}}"/></div><a href="#/tab/items/item/{{item._id}}" class="item">
+        <div>{{item.name | limitTo:30 }}</div>
+        <div>@{{item.menu_name | limitTo:30 }}</div>
+        <div class="text-left assertive">{{item.stars}}</div>
+        <div class="text-left energized pull-right">(250)</div><span class="text-right"><i style="color:grey;" class="icon ion-navigate">&nbsp</i><span>{{item.dist}} mi</span></span></a>
+    </div>
+  </ion-content>
+</ion-view>

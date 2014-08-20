@@ -1,0 +1,15 @@
+
+<ion-view title="Select Your Dish">
+  <div class="bar bar-subheader">
+    <h2 class="title">{{reviewItem.menu.name}}</h2>
+  </div>
+  <ion-content class="has-subheader">
+    <ion-list>
+      <ion-item ng-repeat="item in reviewItem.items" href="#/tab/review/create/{{item._id}}" class="item-text-wrap">
+        <p>{{item.name}}</p>
+      </ion-item>
+      <div style="text-align: center; padding-top: 20px; padding-bottom: 0px">Dish not listed? Be the first to review it:</div>
+      <div href="#/tab/review/create-item" class="button button-block positive">Add New Menu Item</div>
+    </ion-list>
+  </ion-content>
+</ion-view>
