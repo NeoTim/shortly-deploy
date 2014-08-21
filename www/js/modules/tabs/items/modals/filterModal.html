@@ -1,0 +1,16 @@
+
+<div class="modal">
+  <ion-header-bar>
+    <button ng-click="vm.closeModal()" class="button button-clear">Cancel</button>
+    <h1 class="title">Filters</h1>
+    <button ng-click="vm.querySearch(distanceOptions, priceOptions)" class="button button-clear">Search</button>
+  </ion-header-bar>
+  <ion-content>
+    <h4>Distance
+      <ng-single-select options="distanceOptions"></ng-single-select>
+    </h4>
+    <h4>Price
+      <ng-multi-select options="priceOptions"></ng-multi-select>
+    </h4>
+  </ion-content>
+</div>

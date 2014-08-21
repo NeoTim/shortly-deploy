@@ -1,0 +1,29 @@
+
+<ion-view title="{{vm.menu.name}}">
+  <ion-content class="bg-grey">
+    <div class="button-bar"><a ng-click="callBusiness()" class="button button-positive icon ion-ios7-telephone"></a><a class="button button-positive icon ion-ios7-camera"></a><a ng-click="createReview()" class="button button-positive icon ion-ios7-checkmark"></a><a ng-click="bookmarkItem()" class="button button-positive icon ion-bookmark"></a></div>
+    <ion-list>
+      <ion-item>
+        <div class="menu-banner">
+          <div class="menu-banner-right">
+            <h2>{{vm.menu.name}}</h2>
+            <h4>{{vm.menu.vicinity}}</h4>
+            <h4>{{vm.menu.formatted_phone_number}}</h4><i style="color:grey;" class="icon ion-navigate">&nbsp{{vm.menu.distance}}mi</i>
+          </div>
+          <div class="menu-banner-left">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6306.533204574925!2d-122.4091305!3d37.78379139999996!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1406251064525" width="50%" height="200px" frameborder="0" style="border:0"></iframe>
+          </div>
+        </div>
+      </ion-item>
+      <div class="item-divider"></div><a ng-repeat="item in vm.items" href="#/tab/menus/item/{{item._id}}" class="menu-card">
+        <div class="menu-card-content"><img src="{{item.image}}"/>
+          <div class="menu-card-footer">
+            <div>{{item.name}}</div>
+            <div class="text-left assertive">★★★★</div>
+            <div class="text-right energized">(250)</div><i style="color:grey;" class="text-right icon ion-navigate"></i><br/><br/>
+          </div>
+        </div></a>
+    </ion-list>
+  </ion-content>
+</ion-view>
+<MATCH>(i:ITEM)-[:HAS_PHOTOS]->(p)</MATCH>

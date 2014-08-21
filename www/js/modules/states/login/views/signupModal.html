@@ -1,0 +1,26 @@
+
+<div class="modal">
+  <ion-header-bar class="bar-positive">
+    <h1 class="title">Sign-Up</h1>
+    <button ng-click="login.signupModal.hide()" class="button button-clear">cancel</button>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="login.nativeSignup()">
+      <ion-list>
+        <label class="item item-input"><span class="input-label">Email</span>
+          <input type="text" ng-model="login.username"/>
+        </label>
+        <label class="item item-input"><span class="input-label">Password</span>
+          <input type="password" ng-model="login.password"/>
+        </label>
+      </ion-list>
+      <button ng-click="login.signupModal.hide()" class="button button-block button-positive">Sign-Up</button>
+    </form>
+    <div class="row">
+      <div style="text-align: center" class="col col-center">- or -</div>
+    </div>
+    <div class="row">
+      <button ng-click="login.fbLoginFlow(); login.signupModal.hide()" class="button button-block button-facebook-style">Facebook Connect</button>
+    </div>
+  </ion-content>
+</div>

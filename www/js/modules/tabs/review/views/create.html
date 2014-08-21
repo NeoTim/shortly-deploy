@@ -1,0 +1,20 @@
+
+<ion-view title="Create Review">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item item-thumbnail-left"><img ng-src="{{createReviewView.item.image}}"/>
+        <h4>{{createReviewView.item.menu_name}}</h4>
+        <p>{{createReviewView.item.name}}</p>
+      </ion-item>
+      <ion-item>
+        <div class="button-bar">
+          <button ng-repeat="btn in createReviewView.buttons" ng-click="createReviewView.setStarRating(btn)" ng-class="{'button-energized': createReviewView.rating &gt;= btn}" class="button button-clear button-icon icon ion-ios7-star"></button>
+        </div>
+      </ion-item>
+      <label class="item item-input item-floating-label bg-white"><span class="input-label">Review</span>
+        <textarea ng-model="createReviewView.reviewText" placeholder="Review - optional" style="height:100px;"></textarea>
+      </label>
+    </ion-list>
+    <button ng-click="createReviewView.submitReview()" class="button button-block button-positive">Create Review</button>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,25 @@
+
+<ion-view title="Login">
+  <ion-content>
+    <div class="row">
+      <div class="col-6"><img id="userPic"/></div>
+      <div id="userName" class="col-6"></div>
+    </div>
+    <div class="row">{{ login.status }}</div>
+    <div class="row">
+      <button ng-click="login.signupModal.show()" class="button button-block positive">Sign-Up with Plateful</button>
+    </div>
+    <div class="row">
+      <button ng-click="login.loginModal.show()" class="button button-block positive">Login with Plateful</button>
+    </div>
+    <div class="row">
+      <button ng-click="login.fbLoginFlow()" ng-show="login.fbStatus!=='connected'" class="button button-block button-facebook-style">Login with Facebook</button>
+    </div>
+    <div class="row">
+      <button ng-click="login.fbLogout()" ng-show="login.fbStatus==='connected'" class="button button-block button-facebook-style">Logout from Facebook</button>
+    </div>
+    <div class="row">
+      <button ng-click="login.nativeLogout()" ng-show="login.isSignedIn" class="button button-block assertive">Logout</button>
+    </div>
+  </ion-content>
+</ion-view>
