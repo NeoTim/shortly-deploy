@@ -18,8 +18,8 @@
     ]);
 
   app.config(function(RestangularProvider) {
-    // RestangularProvider.setBaseUrl('http://server4dave.cloudapp.net:9000/api/v1/');
-    RestangularProvider.setBaseUrl('http://10.8.29.210:9000/api/v1/');
+    RestangularProvider.setBaseUrl('http://server4dave.cloudapp.net:9000/api/v1/');
+    // RestangularProvider.setBaseUrl('http://10.8.29.210:9000/api/v1/');
     // RestangularProvider.setBaseUrl('http://localhost:9000/api/v1/');
 
 
@@ -300,13 +300,13 @@
       if (!arr) { return; }
       var newArr = [];
       for (var i=0; i<arr.length; i+=size) {
-        newArr.push(arr.slice(i, i+size));        
+        newArr.push(arr.slice(i, i+size));
       }
       // Enter blank space for any remaining columns in the last row.
       newArr[newArr.length-1].length = size;
       var cachedParts;
       var arrString = JSON.stringify(arr);
-      cachedParts = arrayCache.get(arrString+size); 
+      cachedParts = arrayCache.get(arrString+size);
       if (JSON.stringify(cachedParts) === JSON.stringify(newArr)) {
         return cachedParts;
       }
@@ -1921,12 +1921,12 @@ angular.module( "ngAutocomplete", [])
 
     /*
     Basic form class that you can extend in your actual forms.
-    
+
     Object attributes:
     - loading[Boolean] - is the request waiting for response?
     - message[String] - after response, success message
     - errors[String[]] - after response, error messages
-    
+
     Options:
       - submitPromise[function] (REQUIRED) - creates a form request promise
       - onSuccess[function] - will be called on succeded promise
@@ -3975,7 +3975,7 @@ A simple example service that returns some data.
     var createReviewView = this
     createReviewView.item = createReviewInit;
     createReviewView.buttons = [1, 2, 3, 4, 5];
-    
+
     createReviewView.rating = 0;
     CreateReview.set('item_id', createReviewView.item._id);
     createReviewView.review = CreateReview.get();
